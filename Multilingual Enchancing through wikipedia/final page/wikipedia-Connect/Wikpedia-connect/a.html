@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikidata Language Articles</title>
+    <style>
+        .frame-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .frame-container iframe {
+            width: 45%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        .language-frame {
+        width: 40%;
+        height: 200px; /* Adjust height as needed */
+        border: 1px solid #131415;
+        border: 4px solid #121313;
+        margin-bottom: 20px;
+        color:#EA445A ;
+        background-color:#e3f2fd;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 style=" color:#EA445A ; font-size:50px ;margin-left: 420px">Wikidata Language Articles</h1>
+    <input type="text" id="inputString" placeholder="Enter English string" style="width: 420px; height: 40px;font-size: 20px;margin-left: 320px">
+    <select id="language1">
+        <!-- Add options for each language here --><option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="nl">Dutch</option>
+        <option value="pl">Polish</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="sv">Swedish</option>
+        <option value="tr">Turkish</option>
+        <option value="ar">Arabic</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="jv">Javanese</option>
+        <option value="mr">Marathi</option>
+        <option value="pa">Punjabi</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="vi">Vietnamese</option>
+        <option value="ko">Korean</option>
+        <option value="fa">Persian</option>
+        <option value="el">Greek</option>
+        <option value="he">Hebrew</option>
+        <option value="hu">Hungarian</option>
+        <option value="ro">Romanian</option>
+        <option value="cs">Czech</option>
+        <option value="uk">Ukrainian</option>
+        <option value="th">Thai</option>
+        <option value="fi">Finnish</option>
+        <option value="no">Norwegian</option>
+        <option value="da">Danish</option>
+        <option value="id">Indonesian</option>
+        <option value="ms">Malay</option>
+        <option value="sw">Swahili</option>
+        <option value="af">Afrikaans</option>
+        <option value="eu">Basque</option>
+        <option value="ca">Catalan</option>
+        <option value="eo">Esperanto</option>
+        <option value="ga">Irish</option>
+        <option value="gd">Scottish Gaelic</option>
+    </select>
+    <select id="language2">
+        <!-- Add options for each language here -->
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="nl">Dutch</option>
+        <option value="pl">Polish</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="sv">Swedish</option>
+        <option value="tr">Turkish</option>
+        <option value="ar">Arabic</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="jv">Javanese</option>
+        <option value="mr">Marathi</option>
+        <option value="pa">Punjabi</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="vi">Vietnamese</option>
+        <option value="ko">Korean</option>
+        <option value="fa">Persian</option>
+        <option value="el">Greek</option>
+        <option value="he">Hebrew</option>
+        <option value="hu">Hungarian</option>
+        <option value="ro">Romanian</option>
+        <option value="cs">Czech</option>
+        <option value="uk">Ukrainian</option>
+        <option value="th">Thai</option>
+        <option value="fi">Finnish</option>
+        <option value="no">Norwegian</option>
+        <option value="da">Danish</option>
+        <option value="id">Indonesian</option>
+        <option value="ms">Malay</option>
+        <option value="sw">Swahili</option>
+        <option value="af">Afrikaans</option>
+        <option value="eu">Basque</option>
+        <option value="ca">Catalan</option>
+        <option value="eo">Esperanto</option>
+        <option value="ga">Irish</option>
+        <option value="gd">Scottish Gaelic</option>
+    </select>
+    <select id="language3">
+        <!-- Add options for each language here -->
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="nl">Dutch</option>
+        <option value="pl">Polish</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="sv">Swedish</option>
+        <option value="tr">Turkish</option>
+        <option value="ar">Arabic</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="jv">Javanese</option>
+        <option value="mr">Marathi</option>
+        <option value="pa">Punjabi</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="vi">Vietnamese</option>
+        <option value="ko">Korean</option>
+        <option value="fa">Persian</option>
+        <option value="el">Greek</option>
+        <option value="he">Hebrew</option>
+        <option value="hu">Hungarian</option>
+        <option value="ro">Romanian</option>
+        <option value="cs">Czech</option>
+        <option value="uk">Ukrainian</option>
+        <option value="th">Thai</option>
+        <option value="fi">Finnish</option>
+        <option value="no">Norwegian</option>
+        <option value="da">Danish</option>
+        <option value="id">Indonesian</option>
+        <option value="ms">Malay</option>
+        <option value="sw">Swahili</option>
+        <option value="af">Afrikaans</option>
+        <option value="eu">Basque</option>
+        <option value="ca">Catalan</option>
+        <option value="eo">Esperanto</option>
+        <option value="ga">Irish</option>
+        <option value="gd">Scottish Gaelic</option>
+    </select>
+    <select id="language4">
+        <!-- Add options for each language here -->
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="nl">Dutch</option>
+        <option value="pl">Polish</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="sv">Swedish</option>
+        <option value="tr">Turkish</option>
+        <option value="ar">Arabic</option>
+        <option value="ja">Japanese</option>
+        <option value="zh">Chinese</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="jv">Javanese</option>
+        <option value="mr">Marathi</option>
+        <option value="pa">Punjabi</option>
+        <option value="ta">Tamil</option>
+        <option value="te">Telugu</option>
+        <option value="vi">Vietnamese</option>
+        <option value="ko">Korean</option>
+        <option value="fa">Persian</option>
+        <option value="el">Greek</option>
+        <option value="he">Hebrew</option>
+        <option value="hu">Hungarian</option>
+        <option value="ro">Romanian</option>
+        <option value="cs">Czech</option>
+        <option value="uk">Ukrainian</option>
+        <option value="th">Thai</option>
+        <option value="fi">Finnish</option>
+        <option value="no">Norwegian</option>
+        <option value="da">Danish</option>
+        <option value="id">Indonesian</option>
+        <option value="ms">Malay</option>
+        <option value="sw">Swahili</option>
+        <option value="af">Afrikaans</option>
+        <option value="eu">Basque</option>
+        <option value="ca">Catalan</option>
+        <option value="eo">Esperanto</option>
+        <option value="ga">Irish</option>
+        <option value="gd">Scottish Gaelic</option>
+    </select><br><br>
+    <button onclick="fetchData()" style=" color:#f5f1f2 ; width: 140px; height: 40px;background-color: #090c08;font-size: 20px;margin-left: 654px;">Fetch Data</button><br><br><br><br><br><br>
+    <div class="frame-container">
+        
+        <iframe id="output1" class="language-frame" style="width: 600px; height: 300px;margin-left: 127px;"></iframe>
+        <iframe id="output2" class="language-frame" style="width: 600px; height: 300px;margin-right: 50px;"></iframe>
+        <iframe id="output3" class="language-frame" style="width: 600px; height: 300px;margin-left: 127px;"></iframe>
+        <iframe id="output4" class="language-frame" style="width: 600px; height: 300px;margin-right: 50px;"></iframe>
+    </div>
+
+    <script>
+        async function fetchData() {
+            const inputString = document.getElementById('inputString').value;
+            const languages = [
+                document.getElementById('language1').value,
+                document.getElementById('language2').value,
+                document.getElementById('language3').value,
+                document.getElementById('language4').value
+            ];
+            const url = `https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=${inputString}&props=sitelinks/urls&format=json&origin=*`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            for (const entity in data.entities) {
+                const sitelinks = data.entities[entity].sitelinks;
+                for (const site in sitelinks) {
+                    const language = site.replace('wiki', '');
+                    if (languages.includes(language)) {
+                        const link = sitelinks[site].url;
+                        const articleTitle = link.split('/').pop();
+                        fetchArticle(articleTitle, language).then(articleContent => {
+                            document.getElementById(`output${languages.indexOf(language) + 1}`).srcdoc = `<h2>${language.toUpperCase()}</h2><p>${articleContent}</p>`;
+                        });
+                    }
+                }
+            }
+        }
+
+        async function fetchArticle(title, lang) {
+            const url = `https://${lang}.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&origin=*&titles=${title}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            for (const pageid in data.query.pages) {
+                return data.query.pages[pageid].extract;
+            }
+        }
+    </script>
+</body>
+</html>
